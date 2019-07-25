@@ -1,0 +1,48 @@
+{
+    "name": "poweronsystem/webskeletonapp",
+    "description": "Web template",
+    "keywords": ["web", "skeleton", "app", "template"],
+    "homepage": "http://github.com/PowerOnSystem/WebSkeletonApp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Sosa",
+            "email": "sosalucas87@gmail.com",
+            "homepage": "http://github.com/PowerOnSystem"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "monolog/monolog": "^1.17",
+        "poweronsystem/authorizationservice": "dev-master",
+        "poweronsystem/databaseservice": "dev-master",
+        "poweronsystem/validationservice": "dev-master",
+        "poweronsystem/webutility": "dev-master",
+        "slim/slim": "^3.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Libs\\": "src/libs",
+            "App\\Validators\\": "src/validators"
+        },
+        "files": [
+           "src/libs/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public",
+        "test": "phpunit"
+    }
+}
